@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-info shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -32,9 +32,38 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('article.create')}}">Article Create</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('category.create')}}">Category Create</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{route('category.create')}}">Category</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{{route('article.index')}}">Article lists</a></li>
+                                <li><a class="dropdown-item" href="{{route('article.create')}}">Article Create</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
                     </ul>
+{{--                    <ul class="navbar-nav me-auto">--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="{{route('article.create')}}">Article Create</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                    <ul class="navbar-nav me-auto">--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="{{route('category.create')}}">Category Create</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
